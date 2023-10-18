@@ -1,0 +1,36 @@
+
+<h1>Agregar Producto</h1>
+<form action="agregarProducto" method="POST" class="row g-3 border border-bottom border-primary m-5">
+    <div class="col-md-6">
+        <label class="form-label">Categoria</label>
+        <select class="form-select" name="IDcategoria">
+            <?php foreach ($categoria as $CATEGORIA) : ?>
+                <option value="<?= $CATEGORIA->IDcategoria ?>">
+                    <?php echo $CATEGORIA->CATEGORIA ?>
+                </option>                               
+            <?php endforeach ?>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Vehiculo</label>
+        <select name="Vehiculo" id="Vehiculo">
+            <option value="Toyota Corolla">Toyota Corolla</option>
+            <option value="Toyota Etios">Toyota Etios</option>
+            <option value="Toyota Prius">Toyota Prius</option>
+            <option value="Toyota Hilux DX">Toyota Hilux DX</option>
+            <option value="Toyota Hilux SRV">Toyota Hilux SRV</option>
+            <option value="Toyota Land Cruiser">Toyota Land Cruiser</option>
+            <option value="Honda Wave">Honda Wave</option>
+            <option value="Honda HR">Honda HR</option>
+            <option value="Honda Africa Twin">Honda Africa Twin</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Precio</label>
+        <input name="precio" type="float" class="form-control">
+    </div>
+    <div class="col-md-6">
+        <button type="submit" class="btn btn-primary position-absolute end-0">Agregar</button>
+    </div>
+</form>
+
